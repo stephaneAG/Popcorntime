@@ -21,3 +21,6 @@ Big thanks to the PTR team behind popcorn-time-remote, available at [MickdeGraaf
 popcorn-time-mod
 ================
 nothing there, maybe .. come back later ?
+
+
+R: the json-rpc API of Popcorntime is available here [API](https://git.popcorntime.io/popcorntime/desktop/blob/master/docs/json-rpc-api.md)
