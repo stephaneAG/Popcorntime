@@ -1,2 +1,23 @@
 # Popcorntime
 Personal Popcorntime Repo containing wip popcorn ;)
+Currently holds two different subdirs/projects:
+
+
+popcorn-time-remote-mod
+=======================
+mod of MickdeGraaf's popcorn-time-remote that fixes/adds fcnalities
+- [fixed] streamer functionality, for remote watching from any LAN/WAN device running the remote webapp
+- [added] "(un)pause/(un)mute & sync" from PT desktop to PTR when using streamer, for cross devices video current time share
+- [added] "next on ended", for automatic loading of next video, if any, when the streamer video ends
+- [added] "back to streamer", for automatic display of the streamer video when the video has been downloaded on desktop
+
+may be merged to the official repo someday
+
+Available as a [webversion](http://web.popcorntimeremote.com)
+
+Big thanks to the PTR team behind popcorn-time-remote, available at [MickdeGraaf's popcorn-time-remote](https://github.com/MickdeGraaf/popcorn-time-remote)
+
+
+popcorn-time-mod
+================
+nothing there, maybe .. come back later ?
