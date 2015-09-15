@@ -13,7 +13,7 @@ mod of MickdeGraaf's popcorn-time-remote that fixes/adds fcnalities
 
 may be merged to the official repo someday
 
-Available as a [webversion](http://web.popcorntimeremote.com)
+Available as a [webversion](http://stephaneadamgarnier.com/Popcorntime)
 
 Big thanks to the PTR team behind popcorn-time-remote, available at [MickdeGraaf's popcorn-time-remote](https://github.com/MickdeGraaf/popcorn-time-remote)
 
