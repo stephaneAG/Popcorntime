@@ -24,5 +24,6 @@ nothing there, maybe .. come back later ?
 
 
 R: 
-[json-rpc API](https://git.popcorntime.io/popcorntime/desktop/blob/master/docs/json-rpc-api.md)
-[API](https://git.popcorntime.io/popcorntime/eztv-api/tree/master)
+-[Popcorntime json-rpc API](https://git.popcorntime.io/popcorntime/desktop/blob/master/docs/json-rpc-api.md)
+-[Popcorntime API](https://git.popcorntime.io/popcorntime/eztv-api/tree/master)
+-[PopcorntimeTV on a VPS(RPI!)](https://github.com/OstlerDev/PopcornTV/wiki/Running-PopcornTV-on-a-VPS)
