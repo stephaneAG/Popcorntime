@@ -15,7 +15,7 @@ may be merged to the official repo someday
 
 Available as a [webversion](http://stephaneadamgarnier.com/Popcorntime)
 
-Big thanks to the PTR team behind popcorn-time-remote, available at [MickdeGraaf's popcorn-time-remote](https://github.com/MickdeGraaf/popcorn-time-remote)
+Big thanks to the PTR team behind popcorn-time-remote, the PT team, and MickdeGraaf's ( repo available at [MickdeGraaf's popcorn-time-remote](https://github.com/MickdeGraaf/popcorn-time-remote) )
 
 
 popcorn-time-mod
@@ -23,4 +23,6 @@ popcorn-time-mod
 nothing there, maybe .. come back later ?
 
 
-R: the json-rpc API of Popcorntime is available here [API](https://git.popcorntime.io/popcorntime/desktop/blob/master/docs/json-rpc-api.md)
+R: 
+[json-rpc API](https://git.popcorntime.io/popcorntime/desktop/blob/master/docs/json-rpc-api.md)
+[API](https://git.popcorntime.io/popcorntime/eztv-api/tree/master)
