@@ -26,4 +26,13 @@ nothing there, maybe .. come back later ?
 R: 
 -[Popcorntime json-rpc API](https://git.popcorntime.io/popcorntime/desktop/blob/master/docs/json-rpc-api.md)
 -[Popcorntime API](https://git.popcorntime.io/popcorntime/eztv-api/tree/master)
+-[<popcorntimeTV](https://discuss.popcorntime.io/t/popcorntv-bringing-popcorn-time-to-your-apple-tv/38367)
 -[PopcorntimeTV on a VPS(RPI!)](https://github.com/OstlerDev/PopcornTV/wiki/Running-PopcornTV-on-a-VPS)
+
+Some threads/links to follow:
+-[Popcorntime iOS App thread](https://discuss.popcorntime.io/t/public-beta-stripped-down-popcorn-time-app/36933/59)
+-[Popcorntime iOS Design thread](https://discuss.popcorntime.io/t/ios-design-thread/37015)
+-[Design preview](https://appetize.io/app/bf9nm1qkaa8ahgvazzw32u5350?device=iphone4s&scale=75&orientation=portrait)
+-[Webflix](http://webflix.me/#!tv)
+-[Infos](https://discuss.popcorntime.io/t/informative-posts-on-facebook/23374)
+-[Popcorntime Git](https://git.popcorntime.io/groups/popcorntime)
