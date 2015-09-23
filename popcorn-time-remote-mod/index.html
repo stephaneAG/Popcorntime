@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<!--//
+    Popcorn Time Remote v1.1.0.pre
+    Developed by the PTR Team
+    Copyright 2014, the PTR Team
+    Released under the GNU GPL V3 License
+    http://popcorntimeremote.com/
+    ----
+    Modded a littl bit by StephaneAG, to make the streamer work & some other niceties ;p
+  //-->
+<html manifest="remote.appcache" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <title>Popcorn Time Remote</title>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+      <link rel="icon" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon152.png">
+      <link rel="shortcut" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon152.png">
+        
+      <!--// Webapp (Apple) tags //-->
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="apple-mobile-web-app-title" content="Remote">
+      <link rel="apple-touch-icon-precomposed" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon152.png" sizes="152x152">
+      <link rel="apple-touch-icon-precomposed" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon144.png" sizes="144x144">
+      <link rel="apple-touch-icon-precomposed" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon120.png" sizes="120x120">
+      <link rel="apple-touch-icon-precomposed" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon114.png" sizes="114x114">
+      <link rel="apple-touch-icon-precomposed" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon76.png" sizes="76x76">
+      <link rel="apple-touch-icon-precomposed" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon72.png" sizes="72x72">
+      <link rel="apple-touch-icon-precomposed" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon57.png" sizes="57x57">
+      <link rel="apple-touch-icon-precomposed" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon120.png">
+      
+      <!--// Webapp (Android) tags //-->
+      <meta name="mobile-web-app-capable" content="yes">
+      <link rel="icon" href="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon192.png" sizes="192x192">
+      <!--//<link rel="icon" href="assets/img/icons/icon128.png" sizes="128x128">//-->
+      
+      <!--// Windows 8.1 Tile tags //-->
+      <meta name="application-name" content="Popcorn Time Remote">
+      <meta name="msapplication-TileColor" content="#2d72d9">
+      <meta name="msapplication-square70x70logo" content="assets/img/icons/tiny.png">
+      <meta name="msapplication-square150x150logo" content="assets/img/icons/square.png">
+      <meta name="msapplication-wide310x150logo" content="assets/img/icons/wide.png">
+      <meta name="msapplication-square310x310logo" content="assets/img/icons/large.png">
+      
+      <!--// SEO tags //-->
+      <meta name="author" content="The Popcorn Time Remote Team + Tef">
+      <meta name="description" content="Popcorn Time Remote, the best way to control your Popcorn Time app.">
+      <meta name="keywords" content="popcorn time remote, control, popcorn time, simple">
+      <meta name="language" content="english">
+      
+      <!--// Open Graph tags //-->
+      <!--//<link rel="author" href="https://plus.google.com/popcorntimeremote-google-plus-id">//-->
+      <meta property="og:title" content="Popcorn Time Remote">
+      <meta property="og:image" content="assets/img/icons/icon.png">
+      <meta property="og:url" content="http://www.popcorntimeremote.com/">
+      <meta property="og:description" content="With Popcorn Time Remote, you can control your Popcorn Time application on your mobile phone without leaving your lazy chair.">
+      
+      <!--// Twitter Card tags //-->
+      <meta name="twitter:card" content="summary">
+      <meta name="twitter:url" content="http://www.popcorntimeremote.com/">
+      <meta name="twitter:description" content="With Popcorn Time Remote, you can control your Popcorn Time application on your mobile phone without leaving your lazy chair.">
+      <meta name="twitter:image" content="assets/img/icons/icon.png">
+      
+      
+
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/font-awesome.css" rel="stylesheet">
+      <link href="css/styles.css" rel="stylesheet">
+
+      <!-- Tef Edit: adding some quick fixes [ & glitches ;p ] for a little more polished navigation scroll on iOS -->
+      <!--
+      R: js code to disable elastic scrolling on iOS & enable specific scroll
+        => AT THE BOTTOM OF THE REMOTE.JS CODE !
+        
+        /*! On document ready, call functions. */
+        $(document).ready(function() {
+        ...
+        
+      -->
+      
+      <style type="text/css">
+        html, body { height: 100%; overflow: hidden; padding: none; width: 100% !important; float: none !important; margin-left: none !important; }/* the last 2 allows to use full width on the ipad */
+        /*#tefcontentwrapper { height: calc(100% - 67px); overflow-y: scroll; -webkit-overflow-scrolling: touch;}*/
+        /*#tefcontentwrapper { height: calc(100% - 67px); overflow-y: scroll; -webkit-overflow-scrolling: touch; padding-top: 200px;}*/
+        /*#tefcontentwrapper { height: calc(100% - 67px); overflow-y: scroll; -webkit-overflow-scrolling: touch;}*/
+        //#tefcontentwrapper { height: inherit; /*calc(100% - 67px);*/ }
+        #tefcontentwrapper { height: inherit; padding-bottom: 67px; /*background-color: #00DBFF;*/ } /* background color could be set as well as background image ;P nice iPod touch */
+        /*#tefcontentwrapper { height: calc(100% - 67px); }*/
+        /*contents { overflow-y: scroll; -webkit-overflow-scrolling: touch; }*/
+        /* #contents { height: 800px; background-color: #BADA55; overflow-y: scroll; -webkit-overflow-scrolling: touch; } */
+        .menu { -webkit-box-shadow: 0 8px 6px -6px black; }
+        #contents { 
+          height: inherit; overflow-y: auto; /*background-color: #00DBFF;*/ /*-webkit-overflow-scrolling: touch;*/ /* TODO: WIP & chop it's head off NOT to mess with filters, favs or anything else on scroll */
+          padding-right: 0px !important; padding-left: 0px !important;
+        } /* the -webkit-overflow-scrolling messes search & favs, digg after iOS.js scoll => FIX THAT ! */
+        #contents { -webkit-overflow-scrolling: touch; } /* ALL RIIIIIGHT !!! ==> it seems that some fixes I've done elsewhere auto-fixed that => NEAT ==> NATIVE scrolling .. now onto hiding that scrollbar .. */
+        #tefcontentwrapper { overlow: hidden; } /* IF NOT WORKING? FALLBACK TO OVERFLOW-X: HIDDEN */
+        //#contents { width: 330px; padding-right: 20px; } /* 2nd part of hack to hide that *** scrollbar : FIRST APPROACH  - until a way to use 'calc()' is found, I fallback to using media queries on this */
+        /* --- iPhone 2G->4S & iPod Touch 1G->4G :landscape --- */
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) {
+          #contents { width: 490px; padding-right: 20px; }
+        }
+        /* --- iPhone 2G->4S & iPod Touch 1G->4G :portrait --- */
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) {
+          #contents { width: 330px; padding-right: 20px; }
+        }
+        //#contents { width: 330px; padding-right: 20px; padding-left: 10px; } /* 2nd part of hack to hide that *** scrollbar : FIRST APPROACH */
+        //#contents { margin-left: 20px; margin-right: 20px; padding-left: -20px; } /* 2nd part of hack to hide that *** scrollbar !*/
+        //#contents { padding-left: 20px; padding-right: 20px; margin-left: -10px; } /* 2nd part of hack to hide that *** scrollbar !*/
+        //#contents::-webkit-scrollbar { width: 0 !important }
+        /* quick transparent scrollbar hack */
+        /*
+        ::-webkit-scrollbar  {
+          width: 1px;
+          position: absolute;
+          right: -200px;
+          height: 1px;
+          border: none;
+          opacity: 0;
+          z-index: -100;
+          border-radius:1px;
+          border-color: rgba(0, 0, 0, 0.0); 
+          //background:rgba(0, 0, 0, 0.06)
+          background:rgba(0, 0, 0, 0.0)
+        }
+        ::-webkit-scrollbar-track {
+          //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0.0);
+          border-radius:1px;
+          opacity: 0;
+          z-index: -100;
+          border: none;
+          border-color: rgba(0, 0, 0, 0.0);
+        }
+        ::-webkit-scrollbar-track-piece {
+          width: 1px;
+          height: 1px;
+          opacity: 0;
+          z-index: -100;
+          border: none;
+          border-radius:1px;
+          border-color: rgba(0, 0, 0, 0.0); 
+          background:rgba(0, 0, 0, 0.0)
+        }
+        ::-webkit-scrollbar-thumb {
+          border-radius: 1px;
+          border-color: rgba(0, 0, 0, 0.0);
+          height:1px;
+          z-index: -100;
+          opacity: 0;
+          border: none;
+          display: none;
+          //background-color:rgba(103,132,3,0.4) ;
+          background-color:rgba(0,0,0,0.0) ;
+          background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .2) 25%,
+          transparent 25%,transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%,
+          transparent 75%, transparent)
+        }
+        */
+
+        #main-browser { width: inherit !important; /*display: none;*/ /* to check was causes the x-scroll: was fixed by specifying a fixed width like 90%, but calc doesn't work with it */ }
+        #main-browser .subsection-search-filter { 
+          background-color: #0B0C0D; margin-top: -80px !important; overflow: hidden; margin-bottom: 35px !important; /*display: none;*/
+          /*-webkit-box-shadow: 0 8px 6px -6px black;*/ /*I prefer without*/
+          /* -webkit-box-shadow: inset 0 8px 6px -6px black; */ /* appears weird if we don't have a black background behind all the rest */
+        } /* not causing the troubles */
+          #input-search { position: relative !important; z-index: 0 !important; width: 104% !important; border-radius: 0px; margin-left: -5px !important; } /* hack the parent padding ? */
+        #main-browser .subsection-search-filter .form-inline { padding-left: 5px !important; padding-right: 5px !important;  }
+        //#main-browser .subsection-arrows { margin-top: 70px; /*display: none;*/ } /* not causing the troubles */
+        #main-browser .subsection-arrows { margin-top: 10px !important; } /* overwrite of the above as it's more stylish to have either search + arrows or arrows + favs with arrows always centered - iPhone 4S  */
+        /* about the above: the landscape view on a smartphone should be either totally prevented ( aka no orientation-based css/jss ) or it may benefit hugely from an alternative, smaller arrows css */
+        #main-browser .subsection-favs-seen { overflow: hidden !important; /*display: none;*/ margin-top: -13px !important; } /* troubles fixed !*/
+        .row.show-info { /*margin-right: -15px !important;*/ }
+        #shows-container { overflow: hidden; } /* prevent the oversized background to overflow our policy of only Y scroll allowed */
+        /* works fine on iOS 5.1 iPhone:
+        html, body { height: 100%; overflow: hidden; }
+        #tefcontentwrapper { height: inherit; }
+        #contents { height: inherit; overflow-y: auto; }
+         */
+
+        /* a littl' bit of fun ;p */
+        #popcorn-wrapper { padding-left: 50%; }
+        #popcorn { 
+          width: 100px;
+          height: 100px;
+          margin-bottom: 20px;
+          margin-left: -50px; 
+          background-repeat: no-repeat;
+          background-color: #00DBFF;
+          -webkit-box-reflect: below -30px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(60%, transparent), to(white)); /* white was originally at the end */
+          -webkit-transition: background-color 5s ease-in-out;
+          //-webkit-mask-box-image: url(assets/img/icons/popcornmask.png); /* http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/popcornmask2.png */
+          -webkit-mask-box-image:
+url(data:image/png;base64,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);
+        }
+
+        /* settings view fix(es) */
+        //#settings { overflow: hidden; width: 90% !important; }
+        #settings .row { overflow: hidden; padding: 0; margin: 0; }
+        //#settings .welcome.welcome-text { overflow: hidden !important; width: 85% !important; background-color: yellow; }
+        //#settings #form { overflow: hidden !important; width: 85% !important; background-color: yellow; }
+
+        /* fixing the close settings cross button */
+        .btn-close-settings { position: relative; left: -20px; }
+
+        /* trying to fix a weird case where disabling the scroll is prevented when a touchstart happens on an <input> with the current js code */
+        document{
+	//-webkit-overflow-scrolling: none;
+	//-webkit-scrolling: none; /* disable "overall page scroll" ? ( prevent showing the browser's background while at the top-most of the bottom-most locations of the page )- excerpt from iOS W-I-D-E */
+        }
+        //#settings #form input[type=text] { -webkit-scrolling: none; }
+      </style>
+
+      <!--[if lt IE 9]>
+        <script src="assets/js/html5shiv.min.js"></script>
+        <script src="assets/js/respond.min.js"></script>
+      <![endif]-->
+    </head>
+    <body class="col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+    <!-- <body class="col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4" style="width: 100%;"> --> <!-- tef edit -->
+      <!--// SECTION:NOSCRIPT //-->
+      <noscript>
+        <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+          <h2>Enable Javascript</h2>
+          <p>
+            Whoops! Popcorn Time Remote requires Javascript to be enabled in your browser.
+            Please enable Javascript and then come back here.
+          </p>
+        </div>
+      </noscript>
+      
+      <!--// SECTION:MENU //-->
+      <div class="menu" style="">
+        <div class="nav-title">Popcorn Time Remote</div>
+        <ul class="nav nav-hor pull-left">
+          <li class="btn-movies active">Movies</li>
+          <li class="btn-shows">TV Series</li>
+          <li class="btn-anime">Anime</li>
+        </ul>
+        <ul class="nav nav-hor nav-icons pull-right">
+          <li class="btn-inbox"><i class="btn-inbox-icon fa fa-inbox"></i></li> 
+          <li class="btn-favourites"><i class="btn-favourites-icon fa fa-heart"></i></li> 
+          <li class="btn-settings"><i class="btn-settings-icon fa fa-cog"></i></li>
+        </ul>
+      </div>
+
+      <div id="tefcontentwrapper"> <!-- Tef Edit -->
+      <div id="contents">
+      <!-- <div id="contents" style="position: relative; float: left;"> --> <!-- tef edit -->
+        
+        <!--// SECTION:DEFAULT //-->
+        <div id="default" class="hidden">
+          <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+              <h2>Loading App...</h2>
+            </div>
+          </div>
+        </div>
+        
+        <!--// SECTION:MAIN-BROWSER //-->
+        <div id="main-browser" class="sections">
+          <!--// Search & Filter options //-->
+          <div class="subsection-search-filter">
+            <div class="form-inline">
+              Genre <select id="select-filter-genre" class="form-control"><option selected="selected" value="All">All</option><option value="Action">Action</option><option value="Adventure">Adventure</option><option value="Animation">Animation</option><option value="Biography">Biography</option><option value="Comedy">Comedy</option><option value="Crime">Crime</option><option value="Documentary">Documentary</option><option value="Drama">Drama</option><option value="Family">Family</option><option value="Fantasy">Fantasy</option><option value="Film-Noir">Film-Noir</option><option value="History">History</option><option value="Horror">Horror</option><option value="Music">Music</option><option value="Musical">Musical</option><option value="Mystery">Mystery</option><option value="Romance">Romance</option><option value="Sci-Fi">Sci-Fi</option><option value="Short">Short</option><option value="Sport">Sport</option><option value="Thriller">Thriller</option><option value="War">War</option><option value="Western">Western</option></select> 
+              Sort by <select id="select-filter-sort" class="form-control"><option selected="selected" value="popularity">popularity</option><option value="trending">trending</option><option value="last added">last added</option><option value="year">year</option><option value="title">title</option><option value="rating">rating</option></select> 
+              <br>
+              <input id="input-search" class="form-control" name="search" placeholder="Search" type="text">
+              <div class="btn-enter-search pull-right hidden"><i class="fa fa-search"></i></div>
+              <div class="btn-clear-search pull-right hidden"><i class="fa fa-close"></i></div>
+            </div>
+          </div>
+          <!--// Arrows //-->
+          <div class="subsection-arrows">
+            <center>
+              <div class="btn-remote-circle">
+                <div class="btn-enter"></div>
+                <div class="btn-arrow-up">
+                  <i class="fa fa-chevron-up"></i>
+                </div>
+                <div class="btn-arrow-left pull-left">
+                  <i class="fa fa-chevron-left"></i>
+                </div>
+                <div class="btn-arrow-right pull-right">
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="btn-arrow-down">
+                  <i class="fa fa-chevron-down"></i>
+                </div>
+              </div>
+            </center>
+          </div>
+          <!--// Favourites & seen toggle //-->
+          <div class="subsection-favs-seen">
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="btn-seen"><i class="fa fa-eye"></i></div>
+              </div>
+              <div class="col-xs-6">
+                <div class="btn-favourite"><i class="fa fa-heart"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--// SECTION:SHOWS-CONTAINER //-->
+        <div id="shows-container" class="sections hidden">
+          <!--// Back button //-->
+          <div class="btn-back"><i class="fa fa-chevron-left"></i> Go back</div>
+          <!--// Arrows //-->
+          <div class="subsection-arrows">
+            <center>
+              <div class="btn-remote-circle btn-remote-circle-shows">
+                <div class="btn-enter btn-enter-shows"></div>
+                <div class="btn-arrow-up">
+                  <i class="fa fa-chevron-up"></i>
+                </div>
+                <div class="btn-arrow-left-season btn-season-prev pull-left">
+                  <i class="fa fa-chevron-left"></i>
+                </div>
+                <div class="btn-arrow-right-season btn-season-next pull-right">
+                  <i class="fa fa-chevron-right"></i>
+                </div>
+                <div class="btn-arrow-down">
+                  <i class="fa fa-chevron-down"></i>
+                </div>
+              </div>
+            </center>
+          </div>
+          <center>
+            <select id="select-player-shows-container-contain" class="form-control"><option selected="selected">Select player</option></select>
+          </center>
+          <!--// Seen & Quality toggle //-->
+          <div class="subsection-favs-seen show-toggles">
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="btn-seen btn-seen-episode"><i class="fa fa-eye"></i></div>
+              </div>
+              <div class="col-xs-6">
+                <div class="btn-quality btn-quality-big btn-quality-episode"><i class="fa fa-toggle-on"></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="row show-info">
+            <div class="col-xs-6">
+              <img class="show-info-poster" src="">
+            </div>
+            <div class="col-xs-6 show-info-main">
+              <span class="show-info-title">Title</span><br>
+              <span class="show-info-year">Year - Status</span><br>
+              <span class="show-info-seasons">Seasons</span><br>
+              <span class="show-info-rating">Rating</span>
+            </div>
+            <div class="col-xs-12 show-info-metadata">
+              <span class="show-info-genre"></span> • 
+              <span class="show-info-runtime"></span> • 
+              <span class="show-info-imdb"></span>
+              <div class="show-info-synopsis"></div>
+            </div>
+          </div>
+        </div>
+        
+        <!--// SECTION:MOVIE-DETAIL //-->
+        <div id="movie-detail" class="sections hidden">
+          <!--// Back button //-->
+          <div class="btn-back"><i class="fa fa-chevron-left"></i> Go back</div>
+          <!--// Play button over poster image //-->
+          <center>
+            <div class="movie-detail-poster">
+              <img src="">
+              <div class="movie-detail-play-button btn-play"><i class="fa fa-play movie-detail-play-inner"></i></div>
+            </div>
+          </center>
+          <div class="movie-detail-container">
+            <!--// Movie info //-->
+            <div class="movie-detail-sub">
+              <div class="movie-detail-title"></div>
+              <span class="movie-detail-year pull-left"></span>
+              <span class="movie-detail-rating pull-right"></span>
+            </div>
+            <div class="movie-detail-extra-info">
+              <span class="movie-detail-metadata movie-detail-genre">Genre</span> • 
+              <span class="movie-detail-metadata movie-detail-runtime">0 min</span> • 
+              <span class="movie-detail-metadata movie-detail-imdblink"></span>
+            </div>
+            <!--// Synopsis div //-->
+            <div class="movie-detail-synopsis"></div>
+            <!--// Toggle quality button //-->
+            <div class="btn-quality"><i class="fa fa-toggle-on"></i> Toggle Quality</div>
+            <!--// Watch trailer button //-->
+            <div class="btn-trailer"><i class="fa fa-film"></i> Watch Trailer</div>
+            <center>
+              <select id="select-subtitles-movie-detail" class="form-control"><option selected="selected">Select subtitles</option></select>
+              <select id="select-player-movie-detail" class="form-control"><option selected="selected">Select player</option></select>
+            </center>
+            <!--// Favourites & seen toggle //-->
+            <div class="subsection-favs-seen">
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="btn-seen"><i class="fa fa-eye"></i></div>
+                </div>
+                <div class="col-xs-6">
+                  <div class="btn-favourite"><i class="fa fa-heart"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!--// SECTION:DOWNLOADING //-->
+        <div id="downloading" class="sections hidden">
+          <!--// Back button //-->
+          <div class="btn-back"><i class="fa fa-chevron-left"></i> Go back</div>
+          <!--// Downloading text //-->
+          <div class="downloading-text">
+            <h2>Please wait...</h2>
+            <p>
+              Your Popcorn Time client is downloading the selected item.
+            </p>
+          </div>
+        </div>
+        
+        <!--// SECTION:LOADING //-->
+        <div id="loading" class="sections hidden">
+          <div class="loading-text">
+            <h3>Popcorn Time client is loading...</h3>
+          </div>
+        </div>
+        
+        <!--// SECTION:STREAMER //-->
+        <div id="streamer" class="sections hidden">
+          <div class="btn-close-streamer"><i class="fa fa-chevron-left"></i> Close Streamer</div>
+          <video id="streamer-video" src="" autoplay controls="controls">
+            <source id="streamer-source" src="" type="video/mp4">
+          </video>
+          <div class="streamer-link"></div>
+        </div>
+        
+        <!--// SECTION:SETTINGS-CLIENT //-->
+        <div id="settings-client" class="sections hidden">
+          <!--// Back button //-->
+          <div class="btn-back"><i class="fa fa-chevron-left"></i> Go back</div>
+          <div class="settings-text">
+            <p>
+              We're sorry, but the settings of Popcorn Time cannot be changed by the remote.
+              You'll have to get up and walk (all the way!) to your device, in order to change PT's settings.<br>
+              <i>We know, life sucks ;(</i>
+            </p>
+          </div>
+        </div>
+        
+        <!--// SECTION:PLAYER //-->
+        <div id="player" class="sections hidden">
+          <!--// Back button //-->
+          <div class="btn-back"><i class="fa fa-chevron-left"></i> Go back</div>
+          <!--// Info //-->
+          <div id="player-title"></div>
+          <div id="player-info"></div>
+          <img id="player-image" src="">
+          <!--// Player arrows //-->
+          <div class="subsection-arrows-player">
+            <center>
+              <div class="btn-remote-circle">
+                <div class=""><i class="btn-pause fa fa-pause"></i></div>
+                <div class="btn-arrow-up-player">
+                  <i class="fa fa-volume-up"></i>
+                </div>
+                <div class="btn-arrow-left-player pull-left">
+                  <i class="fa fa-backward"></i>
+                </div>
+                <div class="btn-arrow-right-player pull-right">
+                  <i class="fa fa-forward"></i>
+                </div>
+                <div class="btn-arrow-down-player">
+                  <i class="fa fa-volume-down"></i>
+                </div>
+              </div>
+            </center>
+          </div>
+          <div class="btn-mute"><i class="fa fa-volume-off"></i> Toggle Mute</div>
+          <div class="btn-fullscreen"><i class="btn-fullscreen-child fa fa-expand"></i> Toggle Fullscreen</div>
+          <div class="btn-stream"><i class="fa fa-download"></i> Stream here</div>
+          <center>
+            <select id="select-subtitles-player" class="form-control"><option selected="selected">Select subtitles</option></select>
+          </center>
+          <!--// !TODO:
+          # time bar indicator
+          # subtitle shortcuts (delaysubs)
+          //-->
+        </div>
+        
+        <!--// SECTION:ABOUT //-->
+        <div id="about" class="sections hidden">
+          <!--// Back button //-->
+          <div class="btn-back"><i class="fa fa-chevron-left"></i> Go back</div>
+          <!--// About text //-->
+          <div class="about-text">
+            <h3>Popcorn Time Remote</h3>
+            <p>
+              Developed by the Popcorn Time Remote Team.<br>
+              Licensed under the <a href="http://www.gnu.org/copyleft/gpl.html" target="_blank">GNU GPL V3</a> license. <br>
+              Copyright © 2014 Popcorn Time Remote Team.
+            </p>
+            <p>
+              Contributors: Mick de Graaf, Sander Laarhoven and Jon Alexopoulos.
+            </p>
+            <p>
+              Visit our website at <a href="http://www.popcorntimeremote.com/?ref=app" target="_blank">PopcornTimeRemote.com</a>.
+              Browse through our code at <a href="https://www.github.com/ptrteam/remote" target="_blank">GitHub.com</a>.
+            </p>
+            <p>
+              Popcorn Time Remote (PTR) is not affiliated with <a href="">Popcorn Time</a> itself. Please report problems with Popcorn Time to <a href="https://git.popcorntime.io/jira" target="_blank">their issue tracker</a>.
+            </p>
+            <p>
+              We've done everything we can to make your experience with 
+PTR as pleasant as possible. If you've got a problem, suggestion or idea
+ please let us know.
+            </p>
+          </div>
+        </div>
+        
+        <!--// SECTION:SETTINGS //-->
+        <div id="settings" class="sections hidden">
+          <div class="btn-close-settings pull-right"><i class="fa fa-close"></i></div>
+          <div class="welcome welcome-text" style="display: none;">
+            <div class="row">
+              <div class="col-xs-12">
+                <h2>Welcome to Popcorn Time Remote Mod!</h2>
+                <p>
+                  To pair with a Popcorn Time client, set the following connection settings.
+                  These can be changed later in the settings menu. <a href="https://github.com/stephaneAG/Popcorntime#popcorn-time-remote-mod" target="_blank">Need help?</a>
+                </p>
+                <hr>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <!-- Tef Edit  -->
+              <!-- <div id="popcorn">POPCORN</div> -->
+              <form id="form">
+                <div id="popcorn-wrapper"> <div id="popcorn"> <!-- TEF --> </div> </div>
+                <label for="ip">IP Address</label>
+                <input id="ip" class="form-control" name="ip" value="localhost" placeholder="localhost" type="text">
+                <label for="port">Port</label>
+                <input id="port" class="form-control" name="port" value="8008" placeholder="8008" type="number">
+                <label for="username">Username</label>
+                <input id="username" class="form-control" name="username" value="popcorn" placeholder="popcorn" type="text">
+                <label for="password">Password</label>
+                <input id="password" class="form-control" name="password" value="" placeholder="popcorn" type="password">
+                <a class="btn-reload btn btn-default btn-naked pull-left" href="#" onclick="location.reload();">Reload App</a>
+                <a class="btn-save btn btn-primary pull-right" href="#">Save</a>
+                <div class="welcome welcome-button" style="display: none;">
+                  <a class="btn-welcome btn btn-primary pull-right" href="#">Proceed</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div> <!-- end <div id="tefcontentwrapper"> --> <!-- Tef Edit -->
+
+      <!-- tef edit -->
+      <!--
+      <div style="position: relative; float: left; top: 0; min-width: 600px;" id="content2">
+        
+        <div id="streamer2" class="sections">
+          <video style="width: 100%;" src="" id="streamer2-video" autoplay="" controls="controls">
+            <source id="streamer2-source" src="" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      -->
+
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/remote.js"></script>
+      
+  </body></html>
