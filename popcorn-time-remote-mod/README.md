@@ -1,4 +1,4 @@
-<a target="_blank" href="http://stephaneadamgarnier.com/Popcorntime">![Try it now as webapp](https://raw.github.com/GoogleChrome/chrome-app-samples/master/tryitnowbutton.png "Click here to run as a webapp")</a>
+<a target="_blank" href="http://stephaneadamgarnier.com/Popcorntime"><img src="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon.png" align="left" height="120" width="120" ></a>
 
 # Popcorn-time-remote-mod
 
