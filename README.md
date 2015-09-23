@@ -1,9 +1,10 @@
+<img src="http://stephaneadamgarnier.com/Popcorntime/assets/img/icons/icon.png" align="" height="120" width="120" >
 # Popcorntime
 Personal Popcorntime Repo containing wip popcorn ;)
 Currently holds two different subdirs/projects:
 
 
-popcorn-time-remote-mod
+[popcorn-time-remote-mod](https://github.com/stephaneAG/Popcorntime/tree/master/popcorn-time-remote-mod)
 =======================
 mod of MickdeGraaf's popcorn-time-remote that fixes/adds fcnalities
 - [fixed] streamer functionality, for remote watching from any LAN/WAN device running the remote webapp
