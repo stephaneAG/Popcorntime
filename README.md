@@ -6,11 +6,12 @@ Currently holds two different subdirs/projects:
 
 [popcorn-time-remote-mod](https://github.com/stephaneAG/Popcorntime/tree/master/popcorn-time-remote-mod)
 =======================
-mod of MickdeGraaf's popcorn-time-remote that fixes/adds fcnalities
+mod of Popcorntime Remote that fixes/adds fcnalities
 - [fixed] streamer functionality, for remote watching from any LAN/WAN device running the remote webapp
 - [added] "(un)pause/(un)mute & sync" from PT desktop to PTR when opening/closing the streamer, for cross devices video current time share
 - [added] "next on ended", for automatic loading of next video, if any, when the streamer video ends
 - [added] "back to streamer", for automatic display of the streamer video when the video has been downloaded on desktop if the streamer was previously shown
+- [modded] more 'native-like' layout & behavior ( ex: top menu bar), still wip ( nearly finished on the iPhone )
 
 may be merged to the official repo someday
 
