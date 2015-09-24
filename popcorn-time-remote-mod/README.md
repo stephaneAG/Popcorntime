@@ -10,7 +10,9 @@ Mod of the official Popcorntime Remote
 
      
 ## Screenshot
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot1.PNG" width="200">
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot2.PNG" width="200">
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot3.PNG" width="200">
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot4.PNG" width="200">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot1.PNG" width="205">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot2.PNG" width="205">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot3.PNG" width="205">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot4.PNG" width="205">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot5.PNG" width="205">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot6.PNG" width="205">
