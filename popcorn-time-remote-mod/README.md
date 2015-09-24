@@ -10,9 +10,9 @@ Mod of the official Popcorntime Remote
 
      
 ## Screenshot
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot1.PNG" width="210">
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot2v.PNG" width="210">
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot3v.PNG" width="210">
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot4v.PNG" width="210">
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot5.PNG" width="210">
-<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot6.PNG" width="210">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot01.PNG" width="210">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot02.PNG" width="210">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot03.PNG" width="210">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot04.PNG" width="210">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot05.PNG" width="210">
+<img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot06.PNG" width="210">
