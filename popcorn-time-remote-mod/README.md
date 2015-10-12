@@ -9,7 +9,7 @@ Mod of the official Popcorntime Remote
 * [Popcorntime JSON-RPC API](https://git.popcorntime.io/popcorntime/desktop/blob/master/docs/json-rpc-api.md)
 
      
-## Screenshot
+## Screen captures
 <img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot00.PNG" width="207">
 <img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot02.PNG" width="207">
 <img src="http://www.stephaneadamgarnier.com/Popcorntime/assets/screenshots/screenshot03.PNG" width="207">
