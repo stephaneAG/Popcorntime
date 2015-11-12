@@ -31,11 +31,23 @@ https://www.reddit.com/r/PopCornTime/
 https://www.reddit.com/r/PopCornTime/comments/3q3ldp/tv_api_workaround/
 https://www.reddit.com/r/PopCornTime/comments/3rcn6b/thinking_on_reconstructing_popcorn_time/
 
-#### UPDATE: since the movies & tv shows API seems still working for the popcorn-time.se version, check those:
+#### UPDATE2: since the movies & tv shows API seems still working for the popcorn-time.se version, check those:
 R: .se != community version ( but they seem to have opensourced their work, yet NOT on github ? )
 the ui, working ( except for the video links ;p ):  http://beta.time4popcorn.com/  
 movies scraper:  http://beta.time4popcorn.com/js/scrappers/movies/t4p_movies.js?id=9  
 tv scraper:  http://beta.time4popcorn.com/js/scrappers/tv/t4p_tv.js?id=3  
+
+#### UPDATE3: movies & tv shows API are back ! ( & 'll hopefully being easily changeable in the future )
+To fix an existing PopcornTime installation on Linux:
+
+- identify the install dir ( ex: /home/<username>/Documents/popcorntime )
+- edit /home/<username>/Documents/popcorntime/src/app/lib/providers/yts.js & replace its content by the following:  
+http://pastebin.com/raw.php?i=k7dcXgyH
+- edit /home/<username>/Documents/popcorntime/src/app/settings.js & replace its content by the following:  
+http://pastebin.com/raw.php?i=WK5yBtQ1
+- launch PT, & change the value of the "TV Show API Endpoint" setting:
+replace "https://eztvapi.re/" by "https://popcorni33hocj37.onion.to" or "https://mi2i2dospijuauxa.onion.to/"
+- enjoy some popcorn ;p !
 
 R: 
 -[Popcorntime json-rpc API](https://git.popcorntime.io/popcorntime/desktop/blob/master/docs/json-rpc-api.md)
